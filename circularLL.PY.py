@@ -46,8 +46,26 @@ class circularLinkedList:
             temp=temp.next
         print(temp.data)
         print("Length is ",count)
-    def removeLastElement(self):
+    def removeElementByPosition(self,pos):
         temp=self.head
+        count=1
+        if(self.head==None):
+            print("NO ELEMENT CANT DELETE")
+            return
+        if pos==1:
+            while(temp.next!=self.head):
+                temp=temp.next
+            temp.next=self.head.next
+            self.head=self.head.next
+            return
+        while(count!=pos-1):
+            temp=temp.next
+            count+=1
+        temp.next=temp.next.next
+        return self.head
+
+
+
 
 
 
@@ -64,6 +82,8 @@ if __name__ == '__main__':
     ob1.insertATfront(ob1.head,7)
     ob1.insertATfront(ob1.head, 3)
     ob1.insertATfront(ob1.head, 2)
+    ob1.display(ob1.head)
+    ob1.removeElementByPosition(1)
     ob1.display(ob1.head)
 
 
