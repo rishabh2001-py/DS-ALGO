@@ -8,7 +8,7 @@ class circularLinkedList:
     def __init__(self):
         self.head = None
 
-    def insertATfront(self,head,data):
+    def insertATfront(self, head, data):
         new = Node(data)
 
         temp = self.head
@@ -22,47 +22,70 @@ class circularLinkedList:
         new.next = self.head
         self.head = new
 
-
-    def addINLAST(self,data):
+    def addINLAST(self, data):
         new = Node(data)
         temp = self.head
         if (self.head == None):
-            self.insertATfront(self.head,data)
+            self.insertATfront(self.head, data)
             return
 
-        while (temp.next != self.head ):
+        while (temp.next != self.head):
             temp = temp.next
         temp.next = new
         new.next = self.head
 
-    def display(self,head):
-        temp=self.head
-        if(self.head==None):
+    def display(self, head):
+        temp = self.head
+        if (self.head == None):
             print("List is EMPTY INSERT SOMETHING!!!")
-        count=0
-        while(temp!=self.head or count==0 ):
-            count+=1
-            print(temp.data,end="-->")
-            temp=temp.next
+        count = 0
+        while (temp != self.head or count == 0):
+            count += 1
+            print(temp.data, end="-->")
+            temp = temp.next
         print(temp.data)
-        print("Length is ",count)
-    def removeElementByPosition(self,pos):
-        temp=self.head
-        count=1
-        if(self.head==None):
+        print("Length is ", count)
+
+    def removeElementByPosition(self, pos):
+        temp = self.head
+        count = 1
+        if (self.head == None):
             print("NO ELEMENT CANT DELETE")
             return
-        if pos==1:
-            while(temp.next!=self.head):
-                temp=temp.next
-            temp.next=self.head.next
-            self.head=self.head.next
+        if pos == 1:
+            while (temp.next != self.head):
+                temp = temp.next
+            temp.next = self.head.next
+            self.head = self.head.next
             return
-        while(count!=pos-1):
-            temp=temp.next
-            count+=1
-        temp.next=temp.next.next
+        while (count != pos - 1):
+            temp = temp.next
+            count += 1
+        temp.next = temp.next.next
         return self.head
+
+    def split2Halves(self, head):
+        if (self.head == None):
+            print("LIST IS EMPTY")
+            return
+        slow=self.head
+        fast=self.head
+        while(fast.next!=self.head and fast.next.next!=self.head ):
+            fast=fast.next.next
+            slow=slow.next
+        temp2=slow.next
+        slow.next = None
+        temp=self.head
+        while(temp):
+            print(temp.data,end="-->")
+            temp=temp.next
+        print("Null")
+        while(temp2!=self.head):
+            print(temp2.data, end="-->")
+            temp2 = temp2.next
+        print("Null")
+
+
 
 
 
@@ -73,17 +96,15 @@ class circularLinkedList:
 
 
 if __name__ == '__main__':
-    ob1=circularLinkedList()
+    ob1 = circularLinkedList()
     ob1.addINLAST(4)
     ob1.addINLAST(1)
     ob1.insertATfront(ob1.head, 7)
     ob1.insertATfront(ob1.head, 3)
     ob1.insertATfront(ob1.head, 2)
-    ob1.insertATfront(ob1.head,7)
+    ob1.insertATfront(ob1.head, 7)
     ob1.insertATfront(ob1.head, 3)
     ob1.insertATfront(ob1.head, 2)
     ob1.display(ob1.head)
-    ob1.removeElementByPosition(1)
-    ob1.display(ob1.head)
-
-
+    ob1.split2Halves(ob1.head)
+    #ob1.display(ob1.head)
