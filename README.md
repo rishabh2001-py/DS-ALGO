@@ -15,4 +15,6 @@ DS ALGO
 12.BITS
 13.TRIE
 14.SEGMENTED TREES
+15.Recursion
+16.Competitive
 
