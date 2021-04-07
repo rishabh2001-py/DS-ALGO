@@ -67,12 +67,6 @@ class DoublyLL:
 
 
 
-
-
-
-
-
-
     def display(self,head):
         if(self.head==None):
             print("DD IS EMPTY")
@@ -86,6 +80,30 @@ class DoublyLL:
             temp=temp.next
         print("Null")
 
+    def reverse(self,head):
+
+        if(self.head==None):
+            return self.head
+        if(self.head.next==None):
+            return self.head
+
+        current=self.head
+        temp=None
+
+        while(current):
+            temp=current.prev
+            current.prev=current.next
+            current.next=temp
+
+            current=current.prev
+
+        if(temp):
+            temp=temp.prev
+        self.head=temp
+
+        return self.head
+
+
 
 
 
@@ -98,7 +116,7 @@ if __name__ == '__main__':
     ob1.insertion_at_head(1)
     ob1.insertion_at_head(9)
     ob1.display(ob1.head)
-    ob1.deletion(5)
+    ob1.reverse(ob1.head)
     ob1.display(ob1.head)
 
 
