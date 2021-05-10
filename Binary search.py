@@ -11,7 +11,7 @@ def binarysearch(arr,n,key):
             high=mid-1
     return -1
 
-
+if __name__ == '__main__':
 arr=list(map(int,input("enter array").strip().split()))
 key=int(input("enter key"))
 n=len(arr)

@@ -20,25 +20,6 @@ def maxSUM(arr,n):
                 r=j
     print(maxsum,"starting index",l,"end index",r)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 arr=list(map(int,input("Enter array").strip().split()))
 n=len(arr)
 maxSUM(arr,n)

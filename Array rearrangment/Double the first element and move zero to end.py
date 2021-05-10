@@ -4,7 +4,7 @@ def doublethefirst(arr, n):
             arr[i] = arr[i] * 2
             arr[i + 1] = 0
     s = -1
-    j = 0
+
     for j in range(0, n):
         if (arr[j] != 0):
             s = s + 1

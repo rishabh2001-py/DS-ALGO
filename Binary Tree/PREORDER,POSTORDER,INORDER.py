@@ -13,19 +13,20 @@ def Preorder(root):
     Preorder(root.right)
 
 def PostOrder(root):
-
+    ls=[]
     if(root==None):
-        return
+        return ls
+
     PostOrder(root.left)
     PostOrder(root.right)
+    ls.append(root.data)
 
-    print(root.data,end="--")
-def Inorder(Root):
+def Inorder(root):
     if (root == None):
         return
-    PostOrder(root.left)
+    Inorder(root.left)
     print(root.data,end="--")
-    PostOrder(root.right)
+    Inorder(root.right)
 
 
 
@@ -42,14 +43,11 @@ if __name__ == '__main__':
     root.right.left = Node(6)
     root.right.right = Node(7)
 
-    Preorder(root)
+
+    print(PostOrder(root))
     print()
 
-    PostOrder(root)
-    print()
 
-    Inorder(root)
-    print()
 
 
 
