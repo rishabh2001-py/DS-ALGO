@@ -5,35 +5,41 @@ class Node:
         self.data = data
 
 
+def fillmap(root,l,d,m):
+    if root is None:
+        return
 
-def rightView(root):
-    if root == None:
-        return -1
-    que = []
+    if d not in m:
+        m[d]=[root.data,l]
+    elif(m[d][1]>l):
+        m[d]=[root.data,l]
+    fillmap(root.left,l+1,d-1,m)
+    fillmap(root.right, l + 1, d + 1, m)
 
-    que.append(root)
 
-    while (len(que) != 0):
 
-        n = len(que)
 
-        for i in range(0,n):
-            node = que[0]
-            que.pop(0)
 
-            if (i == 0 ):
-                print(node.data,end=' ')
-            elif(i==n-1):
-                print(node.data, end=' ')
 
-            if node.left:
-                que.append(node.left)
-            else:
-                que.append('N')
-            if node.right:
-                que.append(node.right)
-            else:
-                que.append('N')
+
+
+def TopView(root):
+
+
+    if root is None:
+        return
+    m={}
+    fillmap(root,0,0,m)
+
+    for i in sorted(m.keys()):
+        print(m[i][0],end=" ")
+
+
+
+
+
+
+
 
 
 if __name__ == '__main__':
@@ -45,4 +51,4 @@ if __name__ == '__main__':
     root.left.right = Node(5)
     root.right.left = Node(6)
     root.right.right = Node(7)
-    print(rightView(root))
+    print(TopView(root))
