@@ -13,13 +13,6 @@ def fillmap(root,l,d,m):
     fillmap(root.left,l+1,d-1,m)
     fillmap(root.right, l + 1, d + 1, m)
 
-
-
-
-
-
-
-
 def TopView(root):
 
 
