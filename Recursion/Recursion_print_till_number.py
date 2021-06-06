@@ -12,14 +12,6 @@ def inc(n):
     inc(n-1)
     print(n,end=" ")
 
-
-
-
-
-
-
-
-
 def main():
      n=int(input("Enter N:"))
 

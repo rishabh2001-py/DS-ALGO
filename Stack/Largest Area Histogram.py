@@ -10,13 +10,13 @@ def largest_Area_histogram(arr):
     lb = [-1]*n
     rb = [n]*n
  # ---- for right smaller ---
-    for i in range(n-2,-1,-1):
+    for i in range(n-1,-1,-1):
 
         while(len(s)!=0):
 
             if (arr[i]>arr[top]):
                 rb[i]=top
-                s.append(top)
+                #s.append(top)
                 break
             else:
                 top=s.pop()
@@ -51,10 +51,11 @@ def largest_Area_histogram(arr):
     for i in range(n):
         diff=(rb[i]-lb[i])-1
         mx=max(diff*arr[i],mx)
+        print(mx)
 
     print(mx)
 
 if __name__ == '__main__':
 
-    arr=[1,2,3,4,5]
+    arr=[5,4,3,2,1]
     largest_Area_histogram(arr)
