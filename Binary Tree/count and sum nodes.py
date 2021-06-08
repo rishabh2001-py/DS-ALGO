@@ -21,20 +21,6 @@ def Sum(root):
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 if __name__ == '__main__':
 
     root=Node(1)
