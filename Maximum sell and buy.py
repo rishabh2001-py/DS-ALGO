@@ -7,7 +7,7 @@ def maxPROFIT(arr, n):
     minsofar = arr[0]
     for i in range(0, n):
         currprofit = arr[i] - minsofar  # taking first element as minsofar
-        if (arr[i] < minsofar):  # keeps on checking minsofar ,if arr[i] is less tyan minsofar
+        if (arr[i] < minsofar):  # keeps on checking minsofar ,if arr[i] is less than minsofar
             minsofar = arr[i]  # minsofar=arr[i]
         profit = max(profit, currprofit)
     print("Profit is", profit, "Rupees.")

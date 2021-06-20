@@ -16,24 +16,27 @@
 
 
 def stepPerms(n):
-    if n == 1 or n == 2:
-        return n
-    if (n == 3):
-        return 4
-    dp = [0] * n
-    dp[0] = 1
-    dp[1] = 2
-    dp[2] = 4
-    for i in range(3, n):
-        dp[i] = dp[i - 1] + dp[i - 2] + dp[i - 3]
+    dp= (n) * [0]
 
-    return dp[n - 1]
+    for i in range(n):
+        if i==0:
+            dp[0]=1
+        elif i == 1:
+            dp[1] = 1
+        elif i == 2:
+            dp[2] = 2
+        elif i == 3:
+            dp[3] = 4
+        else:
+            dp[i] = dp[i-1] + dp [i-2] + dp [i-3]
+
+    print(dp[n-1])
 
 
 def main():
     n = int(input("Enter number of Steps::"))
 
-    print(stepPerms(n))
+    stepPerms(n)
 
 
 main()
