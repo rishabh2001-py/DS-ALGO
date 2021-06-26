@@ -1,26 +1,52 @@
-from RightViewOfBinaryTree import Node
+#                            4
+#                           /  \
+#                          2    5
+#                         / \   / \
+#                        7   1  2  3
+#                           /
+#                          6
 
-def SumofNodesFromRootToLeaf(root,Ls,maxls):
+currsum=0
+maxheight = 0
+
+from RightViewOfBinaryTree import Node
+def SumofNodesFromRootToLeaf(root,h,sum,arr):
+    global currsum ,maxheight
     if root is None:
         return
-    SumofNodesFromRootToLeaf(root.left,Ls + root.data,maxls)
-    if root.left ==  None and root.right == None:
-        maxls=max(Ls,maxls)
-    SumofNodesFromRootToLeaf(root.left,Ls+root.data,maxls)
+    maxheight = max(maxheight, h)
+    if root.left == None and root.right == None and maxheight==h:
+        if h == maxheight:
+            arr.append([sum+root.data,h])
+    SumofNodesFromRootToLeaf(root.left,h+1,sum+root.data,arr)
+
+    SumofNodesFromRootToLeaf(root.right,h+1,sum+root.data,arr)
+
+
+
+
+    
+
 
 
 if __name__ == '__main__':
 
-    root = Node(20)
-    root.left = Node(8)
-    root.right = Node(22)
-    root.left.left = Node(4)
-    root.left.right = Node(12)
-    # root.right.left = Node(-5)
-    # root.right.right = Node(25)
+    root = Node(4)
+    root.left = Node(2)
+    root.right = Node(5)
+    root.left.left = Node(7)
+    root.left.right = Node(1)
+    root.right.left = Node(2)
+    root.right.right = Node(3)
+    root.left.right.left = Node(6)
+    root.left.right.right = Node(9)
+    root.right.left.right = Node(1)
     res = []
-    ls = -10000
-    maxls = -100000
-    SumofNodesFromRootToLeaf(root,ls,maxls)
+    # ls = -10000
+    # maxls = -100000
+    arr=[]
+    (SumofNodesFromRootToLeaf(root,0,0,arr))
+    print(max(arr))
+
 
 

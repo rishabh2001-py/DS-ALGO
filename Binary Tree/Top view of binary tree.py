@@ -18,11 +18,6 @@ def fillmap(root,l,d,m):
 
 
 
-
-
-
-
-
 def TopView(root):
 
 
@@ -30,7 +25,7 @@ def TopView(root):
         return
     m={}
     fillmap(root,0,0,m)
-
+    print(m)
     for i in sorted(m.keys()):
         print(m[i][0],end=" ")
 

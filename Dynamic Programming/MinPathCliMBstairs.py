@@ -3,7 +3,9 @@
 def stairspath(arr ,n):
 
     dp = (n+1) * [None]
+
     dp[n] = 0
+
 
     for i in range( n-1 ,-1 ,-1):
         if arr[i] != 0:
