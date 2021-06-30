@@ -2,7 +2,7 @@ import numpy as np
 
 def Floodfill(maze,Row,column,pathSofar,node_visited):
 
-    if( Row < 0 or column < 0 or Row==len(maze) or column==len(maze[0]) or maze[Row][column] == 1 or visited[Row][column]==True):
+    if( Row < 0 or column < 0 or Row==len(maze) or column==len(maze[0]) or maze[Row][column] == 1 or node_visited[Row][column]==True):
         return
 
     if(Row == len(maze)-1 and column == len(maze[0])-1 ):

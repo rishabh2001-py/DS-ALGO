@@ -5,16 +5,9 @@ def move0sAT_end(arr,n):
      for j in range(0,n):
          if(arr[j]!=0):
              i=i+1
-             print(i)
+
              arr[j],arr[i]=arr[i],arr[j]
      return arr
-
-
-
-
-
-
-
 
 
 

@@ -17,6 +17,7 @@ def stairspath(arr ,n):
                 j+=1
             if mini != 10 ** 9 :
                 dp[i] = mini + 1
+    print(dp)
     print(dp[0])
 
 
@@ -25,5 +26,5 @@ def stairspath(arr ,n):
 
 if __name__ == '__main__':
 
-    arr= [1,2,2,1,5,9]
+    arr= [2 ,3 ,1, 1, 2 ,4 ,2 ,0 ,1 ,1]
     stairspath(arr,len(arr))
