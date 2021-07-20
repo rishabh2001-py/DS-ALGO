@@ -1,6 +1,5 @@
 from BuildBstFromArray import Node , Inorder 
 
-
 def Search(root,val):
     
     if root == None:
@@ -16,10 +15,6 @@ def Search(root,val):
     answer = Search(root.right,val)
     
     return answer
-        
-    
-
-
 
 
 if __name__ == '__main__':

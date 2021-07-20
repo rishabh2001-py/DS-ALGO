@@ -31,8 +31,6 @@ def TargetSubsetDP(arr,target):
 
 
 
-
-
 if __name__ == '__main__':
     arr=[1,4,5,2,1,6]
     target = 5

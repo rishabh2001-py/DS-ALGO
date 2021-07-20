@@ -14,6 +14,7 @@ def anagramOfstring(s1,s2):
         except:
             m1[s1[i]]=1
 
+    print(m1)
     for i in s2:
         try:
             if m1[i]>0:
@@ -33,8 +34,8 @@ def anagramOfstring(s1,s2):
 
 
 if __name__ == '__main__':
-    s1="silent"
-    s2="listen"
+    s1="siilent"
+    s2="listenn"
     
     anagramOfstring(s1,s2)
 

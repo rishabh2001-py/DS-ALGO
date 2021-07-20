@@ -3,9 +3,6 @@
 #Auxiliary Space : O(1)
 import math
 
-
-
-
 a1=[1,2,3,4,5,6,7]
 d=int(input("enter d element"))
 n=len(a1)

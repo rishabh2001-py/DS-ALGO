@@ -12,11 +12,11 @@ def binarysearch(arr,n,key):
     return -1
 
 if __name__ == '__main__':
-arr=list(map(int,input("enter array").strip().split()))
-key=int(input("enter key"))
-n=len(arr)
-flag=binarysearch(arr,n,key)
-if(flag==-1):
-    print("ELEMENT NOT FOUND")
-else:
-    print("Element found at %d"%flag)
+    arr=list(map(int,input("enter array").strip().split()))
+    key=int(input("enter key"))
+    n=len(arr)
+    flag=binarysearch(arr,n,key)
+    if(flag==-1):
+       print("ELEMENT NOT FOUND")
+    else:
+       print("Element found at %d"%flag)

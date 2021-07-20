@@ -19,20 +19,6 @@ def aggresive_cows(nc,stall_arr):
             low=mid+1
     return ans
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 nc=int(input("Enter number of cows"))
 
 stall_ar=list(map(int,input("Enter stall arr:").strip().split()))
