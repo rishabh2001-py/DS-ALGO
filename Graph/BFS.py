@@ -8,15 +8,15 @@ class Bfs(Graph):
         visited = self.V*[False]
         visited[source] = True
         parent = self.V*[-1]
-        que.append(self.graph[0])
+        que.append(source)
 
         while(len(que)!=0):
             cur = que.pop(0)
             if cur == destination:
                 break;
 
-            for i in range(len(self.graph[cur])):
-                if self.graph[cur][i] != visited[i]:
+            for i in range(self.graph[cur]):
+                if not visited[i]:
                     que.append(i)
                     visited[i]=True
                     parent[i]=cur
