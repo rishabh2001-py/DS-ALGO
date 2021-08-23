@@ -29,7 +29,6 @@ def TotalWays(N):
 
     return ((countSpace +countPlot )**2) % 1000000007
 
-if __name__ == '__main__':
-
-    n = int(input("Enter N: "))
+if __name__ == "__main__":
+    n = int(input("Enter N : "))
     print(TotalWays(n))

@@ -8,6 +8,7 @@ def Permutation(ques,ans):
         char_at_i = ques[i]
         rest_of_que=ques[:i]+ques[i+1:]
         Permutation(rest_of_que,ans+char_at_i)
+        # Permutation(rest_of_que, ans)
 
 
 

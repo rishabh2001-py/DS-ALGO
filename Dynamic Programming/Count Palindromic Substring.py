@@ -20,6 +20,7 @@ def FindPalindromicnumber(s):
                 else:
                     dp_arr[row][column] = 0
             if (dp_arr[row ][column ] == 1):
+                print(s[row:column+1])
                 count += 1
 
             row += 1

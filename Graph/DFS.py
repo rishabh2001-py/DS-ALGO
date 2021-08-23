@@ -25,8 +25,6 @@ def dfsPath(source,visited):
             dfsPath(i,visited)
 
             
-    
-
 
 def dfs(source, destination):
     visited = graph.vertex * [False]
