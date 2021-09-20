@@ -1,4 +1,5 @@
 def maxSumIS(arr, n):
+    
     dp = [0] * (n)
     dp[0] = arr[0]
     for i in range(n):
@@ -14,5 +15,5 @@ def maxSumIS(arr, n):
 
 
 if __name__ == '__main__':
-    arr = [2, 5, 1, 7, 9]
+    arr = [11,22,44,6,1,4,89]
     print(maxSumIS(arr, len(arr)))

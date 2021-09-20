@@ -29,24 +29,22 @@ def printPath(root,x):
         path.append(root.data)
         return True
 
-    IsFound=Search(root.left,x)
+    path.append(root.data)
 
-    if IsFound:
-        print(root.data)
-        path.append(root.data)
+    Isfound = printPath(root.left,x)
+    if Isfound :
         return True
 
-    IsFound=Search(root.right,x)
-
-    if IsFound:
-        print(root.data)
-        path.append(root.data)
+    Isfound = printPath(root.right, x)
+    if Isfound:
         return True
 
+    path.pop()
     return False
 
 
 
+    
 
 
 
@@ -63,11 +61,11 @@ if __name__ == '__main__':
     root.left.right = Node(5)
     root.right.left = Node(6)
     root.right.right = Node(7)
-    Isfound=(Search(root,7))
+    Isfound=(Search(root,5))
     print(Isfound)
 
     if Isfound :
-        printPath(root,1)
+        printPath(root,5)
 
     print(path)
 
