@@ -120,11 +120,26 @@ def fun(arr,n):
 
     return sum
 
+#1234
+def combinations(que,ans):
+
+    if len(que)== 0:
+        print(ans)
+        return
+
+    for i in range(len(que)):
+        ros = que[:i]+que[i+1:]
+        combinations(ros,ans+que[i])
+
+
+
+
+
 if __name__ == '__main__':
 
-    arr= [3,6,1,2]
 
-    ans = fun(arr,len(arr))
+    ans = ""
+    combinations("123",ans)
     print(ans)
 
 
