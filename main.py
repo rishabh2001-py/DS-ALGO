@@ -63,39 +63,19 @@
 
 
 
+# Backtracking to find all subsets
+
+def SubSet(arr, temp, index):
+    print(temp)
+
+    for i in range(index, len(arr)):
+        temp.append(arr[i])
+
+        SubSet(arr, temp, i + 1)
+
+        temp.pop(-1)
+    return
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+arr = [1, 2, 3]
+SubSet(arr, [], 0)

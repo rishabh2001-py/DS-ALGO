@@ -8,10 +8,11 @@ def getSubsequence(s,ans):
       return
 
 
-    char_at_start=s[0]
-    rest_of_string=s[1:]
+    char_at_start=s[0]   #s[0] = g
+    rest_of_string=s[1:] #ros = fg
+    getSubsequence(rest_of_string, ans + char_at_start)
     getSubsequence(rest_of_string ,ans+"")
-    getSubsequence(rest_of_string, ans+char_at_start)
+
 
 
 if __name__ == "__main__":

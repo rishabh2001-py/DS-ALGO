@@ -18,12 +18,12 @@ def possibleWords(a, N):
 
         for j in resultarray:
             main_array.append(i + j)
-    print(main_array)
+
     return sorted(main_array)
 
 
 if __name__ == '__main__':
-    arr = [ 9, 8]
+    arr = [ 2, 3,4]
     res=(possibleWords(arr, len(arr)))
     print(res)
     print(len(res))
