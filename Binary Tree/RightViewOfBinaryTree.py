@@ -5,6 +5,32 @@ class Node:
         self.data = data
 
 
+def levelOrder(root):
+        ls = []
+        que = []
+        que.append(root)
+        que.append(None)
+
+        while (len(que) != 0):
+
+            node = que[0]
+            que.pop(0)
+
+            if (node != None):
+
+                ls.append(node.data)
+
+                if (node.left):
+                    que.append(node.left)
+
+                if (node.right):
+                    que.append(node.right)
+
+            elif (len(que) != 0):
+
+                que.append(None)
+
+        return ls
 
 def rightView(root):
     if root == None:

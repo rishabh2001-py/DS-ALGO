@@ -27,15 +27,7 @@ def levelOrder(root):
         return ls
 
 
-# {
-#  Driver Code Starts
-# Initial Template for Python 3
 
-# Contributed by Sudarshan Sharma
-from collections import deque
-
-
-# Tree Node
 class Node:
     def __init__(self, data):
         self.right = None

@@ -2,10 +2,10 @@
 def TargetSubset(arr,idx,setofn,sumofn,target):
 
    if  idx == len(arr):
-       if sumofn == target:
-           print("resut found",setofn)
+        if sumofn == target:
+            print("resut found",setofn)
 
-       return
+        return
 
    TargetSubset(arr,idx+1,setofn + "-" + str(arr[idx]),sumofn+arr[idx],target)
    TargetSubset(arr,idx+1,setofn + "",sumofn,target)
